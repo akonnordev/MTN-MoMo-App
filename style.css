@@ -7,7 +7,7 @@
   display: block;
   z-index: 98;
   padding-top: 80px;
-  background-color: rgb(173, 172, 174);
+  background-color: white;
   transition: 0.4s;
 }
 .active {
@@ -16,20 +16,32 @@
 .mobile-nav a {
   display: block;
   width: 100%;
-  text-align: center;
-  color: white;
+  text-align: left;
+  color: black;
   text-decoration: none;
-  padding: 15px 18px;
-  background-color: black;
+  padding: 1px 15px;
+  background-color: white;
   margin: 0 auto 16px;
 }
+i {
+  color: #ffcc00;
+  z-index: 98;
+  padding-right: 18px;
+}
 
-.mobile-nav a:hover {
-  background-color: blueviolet;
+.icon-spacing a:hover {
+  background-color: rgb(132, 131, 134);
+}
+.icon-spacing {
+  padding-left: 9px;
 }
 .click1 {
   font-size: 16px;
   cursor: pointer;
+}
+.mobile-nav nav #idd1 {
+  background-color: #ffcc00;
+  color: blue;
 }
 
 .close-nav {
