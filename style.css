@@ -1,9 +1,29 @@
-.mobile-nav {
+html,
+body {
+  overflow-x: hidden;
+}
+#main-bucket {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffcc00;
   position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 20px 5px 0;
+  width: 100vw;
+  margin-top: -10px;
+}
+
+.mobile-nav {
+  position: relative;
+  min-height: 100vh;
+  overflow-y: scroll;
+  font-family: "Montserrat", sans-serif;
   top: 0;
   left: 100%;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: block;
   z-index: 98;
   padding-top: 80px;
@@ -12,6 +32,12 @@
 }
 .active {
   left: 0;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .mobile-nav a {
   display: block;
@@ -52,7 +78,7 @@ i {
   border: none;
   background-color: transparent;
   font-size: 28px;
-  font-weight: 50;
+  font-weight: 500;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
