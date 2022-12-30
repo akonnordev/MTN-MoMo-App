@@ -30,6 +30,7 @@ const posit = document.querySelector(".posit");
 image.addEventListener("click", function () {
   modalBg.classList.remove("modal-activate");
   document.querySelector(".main-nav h1").textContent = "Home";
+  document.querySelector(".main-nav").style.position = "fixed";
   image.src = "images/mtn momo.png";
 });
 posit.addEventListener("click", function () {
