@@ -12,11 +12,28 @@
     top: 0;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    z-index: 89;
     background-color: #ffcc00;
     color: black;
     padding: 14px 14px;
     font-size: 17px;
+  }
+  .main-nav2 {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    left: 100%;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 89;
+    background-color: #ffcc00;
+    color: black;
+    padding: 14px 14px;
+    font-size: 17px;
+  }
+  .active2 {
+    left: 0;
   }
 
   .mobile-nav {
@@ -76,8 +93,10 @@
 
   .close-nav {
     position: absolute;
-    top: 100px;
+    top: 40px;
+    padding-right: 35px;
     right: 10px;
+    z-index: 98;
     font-weight: bold;
     cursor: pointer;
     border: none;
