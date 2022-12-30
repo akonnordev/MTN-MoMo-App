@@ -34,11 +34,11 @@ image.addEventListener("click", function () {
   image.src = "images/mtn momo.png";
 });
 posit.addEventListener("click", function () {
-  document.querySelector(".main-nav").style.zindex = 0;
   document.querySelector(".main-nav").style.paddingtop = "245px";
   document.querySelector(".main-nav").style.position = "relative";
   posit.zindex = 90;
   document.querySelector(".modal-box ").style.zindex = 98;
+  mobileMenu.style.padding = "0 29px";
 });
 
 modalBtn.addEventListener("click", function () {
