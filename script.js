@@ -24,17 +24,26 @@ closeNav.addEventListener("click", function () {
 let modalBtn = document.querySelector(".modal-btn");
 let modalBg = document.querySelector(".modal-bg");
 let modalClose = document.querySelector(".close-modal");
+const image = document.querySelector(".image");
+
+image.addEventListener("click", function () {
+  modalBg.classList.remove("modal-activate");
+  document.querySelector(".main-nav h1").textContent = "Home";
+  image.src = "images/mtn momo.png";
+});
 
 modalBtn.addEventListener("click", function () {
   let guess = Number(document.querySelector(".guess").value);
   console.log(typeof guess, guess);
   modalBg.classList.add("modal-activate");
-  document.querySelector(".main-nav").style.left = "100%";
+  document.querySelector(".main-nav h1").textContent = "MoMo Pin";
+  image.src = "images/arrowb.png";
+  // document.querySelector(".main-nav").style.left = "100%";
 });
 
 modalClose.addEventListener("click", function () {
   modalBg.classList.remove("modal-activate");
-  document.querySelector(".main-nav").style.left = "0px";
+  // document.querySelector(".main-nav").style.left = "0px";
 });
 const togglePassword = document.querySelector("#togglePassword");
 const password = document.querySelector("#id_password");

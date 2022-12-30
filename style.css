@@ -145,7 +145,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.78);
+    background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,6 +156,7 @@
   .modal-activate {
     visibility: visible;
     opacity: 1;
+    z-index: 98;
   }
   .modal-box {
     position: relative;
@@ -163,11 +164,13 @@
     font-family: "Montserrat", sans-serif;
     background-color: white;
     width: 80vw;
-    height: 70vh;
-    z-index: 100;
-    display: flex;
+    height: 40vh;
+    padding-bottom: 40px;
+    margin-bottom: 270px;
+    z-index: 99;
+    /* display: flex;
     align-content: stretch;
-    flex-direction: column;
+    flex-direction: column; */
   }
 
   input[type="number"] {
@@ -182,8 +185,8 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  .posit {
-    padding-bottom: 70%;
+  .modal-box .posit {
+    padding-bottom: 80%;
   }
   .modal-btn {
     /* position: fixed; */
@@ -200,6 +203,7 @@
 
   .close-modal {
     position: absolute;
+    display: none;
     top: 10px;
     right: 10px;
     font-weight: bold;
