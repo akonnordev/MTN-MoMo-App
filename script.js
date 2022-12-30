@@ -18,4 +18,5 @@ closeNav.addEventListener("click", function () {
   mainNav2.classList.remove("active2");
   document.querySelector(".main-nav h1").textContent = "Home";
   document.querySelector(".main-nav").style.left = "0px";
+  footerNav.style.left = "0px";
 });
