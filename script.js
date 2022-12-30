@@ -25,11 +25,19 @@ let modalBtn = document.querySelector(".modal-btn");
 let modalBg = document.querySelector(".modal-bg");
 let modalClose = document.querySelector(".close-modal");
 const image = document.querySelector(".image");
+const posit = document.querySelector(".posit");
 
 image.addEventListener("click", function () {
   modalBg.classList.remove("modal-activate");
   document.querySelector(".main-nav h1").textContent = "Home";
   image.src = "images/mtn momo.png";
+});
+posit.addEventListener("click", function () {
+  document.querySelector(".main-nav").style.zindex = 0;
+  document.querySelector(".main-nav").style.paddingtop = "245px";
+  document.querySelector(".main-nav").style.position = "relative";
+  posit.zindex = 90;
+  document.querySelector(".modal-box ").style.zindex = 98;
 });
 
 modalBtn.addEventListener("click", function () {
@@ -38,7 +46,9 @@ modalBtn.addEventListener("click", function () {
   modalBg.classList.add("modal-activate");
   document.querySelector(".main-nav h1").textContent = "MoMo Pin";
   image.src = "images/arrowb.png";
-  // document.querySelector(".main-nav").style.left = "100%";
+  document.querySelector(".main-nav").style.position = "float";
+  document.querySelector(".main-nav").style.zindex = 1;
+  document.querySelector(".modal-box ").style.zindex = 98;
 });
 
 modalClose.addEventListener("click", function () {
