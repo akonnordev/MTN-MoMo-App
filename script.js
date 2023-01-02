@@ -74,9 +74,11 @@ togglePassword.addEventListener("click", function () {
 sendCode.addEventListener("click", function () {
   let guess = Number(document.querySelector(".guess").value);
   if (!guess) {
-    console.log("enter a number");
+    alert(`
+    Enter your 4 digits PinCode`);
   } else if (guess === secretNumber) {
-    alert("helloo good");
+    console.log(`${secretNumber}`);
+    // alert("helloo good");
   } else if (guess !== secretNumber) {
     chances--;
     alert(`
@@ -85,16 +87,8 @@ sendCode.addEventListener("click", function () {
     Please note that MoMo Pin will
     be blocked if wrong MoMo Pin 
     is entered more than 3 times.
-    You have ${chances--} changes left`);
-    return true;
-
-    // modalBg.classList.add("modal-activate");
-    // document.querySelector(".main-nav h1").textContent = "MoMo Pin";
-    // image.src = "images/arrowb.png";
-    // document.querySelector(".main-nav").style.position = "float";
-    // document.querySelector(".main-nav").style.zindex = 1;
-    // document.querySelector(".modal-box ").style.zindex = 98;
+    You have ${chances} changes left`);
   } else {
-    console.log("your pin is blocked");
+    alert("Restart");
   }
 });

