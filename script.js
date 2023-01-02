@@ -4,6 +4,24 @@ const mobileMenu = document.querySelector(".mobile-nav");
 const closeNav = document.querySelector(".close-nav");
 const mainNav2 = document.querySelector(".main-nav2");
 const footerNav = document.querySelector(".footer-nav");
+const secretNumber = 1234;
+const sendCode = document.querySelector(".sendcode");
+let chances = 3;
+
+sendCode.addEventListener("click", function () {
+  let guess = Number(document.querySelector(".guess").value);
+  if (!guess) {
+    console.log("enter a number");
+  } else if (guess === secretNumber) {
+    console.log("great score");
+  } else if (guess !== secretNumber) {
+    console.log("wrong");
+    chances--;
+    console.log(`You have ${chances} left`);
+  } else {
+    console.log("your pin is blocked");
+  }
+});
 
 clickToOpen.addEventListener("click", function () {
   mobileMenu.classList.toggle("active");
@@ -35,15 +53,13 @@ image.addEventListener("click", function () {
 });
 posit.addEventListener("click", function () {
   document.querySelector(".main-nav").style.paddingtop = "245px";
-  document.querySelector(".main-nav").style.position = "relative";
+  document.querySelector(".main-nav").style.position = "sticky";
   posit.zindex = 90;
   document.querySelector(".modal-box ").style.zindex = 98;
   mobileMenu.style.padding = "0 29px";
 });
 
 modalBtn.addEventListener("click", function () {
-  let guess = Number(document.querySelector(".guess").value);
-  console.log(typeof guess, guess);
   modalBg.classList.add("modal-activate");
   document.querySelector(".main-nav h1").textContent = "MoMo Pin";
   image.src = "images/arrowb.png";
