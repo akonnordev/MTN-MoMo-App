@@ -77,6 +77,8 @@ sendCode.addEventListener("click", function () {
     alert(`
     Enter your 4 digits PinCode`);
   } else if (guess === secretNumber) {
+    modalBg.classList.remove("modal-activate");
+    modalBg2.classList.add("modal-activate2");
     document.querySelector(".main-nav").style.position = "fixed";
     image.src = "images/mtn momo.png";
     document.querySelector(".main-nav h1").textContent = "MoMo";
@@ -95,8 +97,10 @@ sendCode.addEventListener("click", function () {
 
     if (chances === 0) {
       sendCode.disabled = true;
+      clickToOpen.style.display = "none";
       document.querySelector(".restart").textContent =
         "Pin Blocked, Refresh page";
+      document.querySelector(".restart").style.color = "red";
     }
   }
 });

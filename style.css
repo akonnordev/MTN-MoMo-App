@@ -242,6 +242,10 @@
     padding-left: 40px;
     padding-top: 27px;
   }
+  .modal-box2 p {
+    font-size: 8px;
+    color: rgba(0, 0, 0, 0.613);
+  }
   .close-modal2 {
     position: absolute;
     display: none;
