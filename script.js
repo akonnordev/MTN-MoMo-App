@@ -7,21 +7,8 @@ const footerNav = document.querySelector(".footer-nav");
 const secretNumber = 1234;
 const sendCode = document.querySelector(".sendcode");
 let chances = 3;
-
-sendCode.addEventListener("click", function () {
-  let guess = Number(document.querySelector(".guess").value);
-  if (!guess) {
-    console.log("enter a number");
-  } else if (guess === secretNumber) {
-    console.log("great score");
-  } else if (guess !== secretNumber) {
-    console.log("wrong");
-    chances--;
-    console.log(`You have ${chances} left`);
-  } else {
-    console.log("your pin is blocked");
-  }
-});
+let modalBg2 = document.querySelector(".modal-bg2");
+let modalClose2 = document.querySelector(".close-modal2");
 
 clickToOpen.addEventListener("click", function () {
   mobileMenu.classList.toggle("active");
@@ -53,7 +40,7 @@ image.addEventListener("click", function () {
 });
 posit.addEventListener("click", function () {
   document.querySelector(".main-nav").style.paddingtop = "245px";
-  document.querySelector(".main-nav").style.position = "sticky";
+  document.querySelector(".main-nav").style.position = "fixed";
   posit.zindex = 90;
   document.querySelector(".modal-box ").style.zindex = 98;
   mobileMenu.style.padding = "0 29px";
@@ -82,4 +69,32 @@ togglePassword.addEventListener("click", function () {
   password.setAttribute("type", type);
   // toggle the eye slash icon
   this.classList.toggle("fa-eye-slash");
+});
+
+sendCode.addEventListener("click", function () {
+  let guess = Number(document.querySelector(".guess").value);
+  if (!guess) {
+    console.log("enter a number");
+  } else if (guess === secretNumber) {
+    alert("helloo good");
+  } else if (guess !== secretNumber) {
+    chances--;
+    alert(`
+    Wrong MoMo Pin
+    Entered MoMo Pin is incorrect.
+    Please note that MoMo Pin will
+    be blocked if wrong MoMo Pin 
+    is entered more than 3 times.
+    You have ${chances--} changes left`);
+    return true;
+
+    // modalBg.classList.add("modal-activate");
+    // document.querySelector(".main-nav h1").textContent = "MoMo Pin";
+    // image.src = "images/arrowb.png";
+    // document.querySelector(".main-nav").style.position = "float";
+    // document.querySelector(".main-nav").style.zindex = 1;
+    // document.querySelector(".modal-box ").style.zindex = 98;
+  } else {
+    console.log("your pin is blocked");
+  }
 });
