@@ -77,10 +77,14 @@ sendCode.addEventListener("click", function () {
     alert(`
     Enter your 4 digits PinCode`);
   } else if (guess === secretNumber) {
-    console.log(`${secretNumber}`);
+    document.querySelector(".main-nav").style.position = "fixed";
+    image.src = "images/mtn momo.png";
+    document.querySelector(".main-nav h1").textContent = "MoMo";
+    clickToOpen.style.display = "none";
     // alert("helloo good");
   } else if (guess !== secretNumber) {
     chances--;
+
     alert(`
     Wrong MoMo Pin
     Entered MoMo Pin is incorrect.
@@ -88,7 +92,11 @@ sendCode.addEventListener("click", function () {
     be blocked if wrong MoMo Pin 
     is entered more than 3 times.
     You have ${chances} changes left`);
-  } else {
-    alert("Restart");
+
+    if (chances === 0) {
+      sendCode.disabled = true;
+      document.querySelector(".restart").textContent =
+        "Pin Blocked, Refresh page";
+    }
   }
 });
