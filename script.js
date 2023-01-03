@@ -11,6 +11,7 @@ let modalBg2 = document.querySelector(".modal-bg2");
 let modalClose2 = document.querySelector(".close-modal2");
 const date = new Date().toUTCString();
 console.log(date);
+let mbody = document.querySelector(".mbody");
 
 clickToOpen.addEventListener("click", function () {
   mobileMenu.classList.toggle("active");
@@ -18,6 +19,7 @@ clickToOpen.addEventListener("click", function () {
   document.querySelector(".main-nav h1").textContent = "Menu";
   document.querySelector(".main-nav").style.left = "100%";
   footerNav.style.left = "100%";
+  mbody.style.display = "none";
 });
 
 closeNav.addEventListener("click", function () {
@@ -26,6 +28,7 @@ closeNav.addEventListener("click", function () {
   document.querySelector(".main-nav h1").textContent = "Home";
   document.querySelector(".main-nav").style.left = "0px";
   footerNav.style.left = "0px";
+  mbody.style.display = "block";
 });
 
 let modalBtn = document.querySelector(".modal-btn");
