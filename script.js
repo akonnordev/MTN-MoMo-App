@@ -9,6 +9,8 @@ const sendCode = document.querySelector(".sendcode");
 let chances = 3;
 let modalBg2 = document.querySelector(".modal-bg2");
 let modalClose2 = document.querySelector(".close-modal2");
+const date = new Date().toUTCString();
+console.log(date);
 
 clickToOpen.addEventListener("click", function () {
   mobileMenu.classList.toggle("active");
@@ -79,6 +81,9 @@ sendCode.addEventListener("click", function () {
   } else if (guess === secretNumber) {
     modalBg.classList.remove("modal-activate");
     modalBg2.classList.add("modal-activate2");
+    document.querySelector(
+      ".loginT"
+    ).innerHTML = `Your last MoMo Login was on ${date}`;
     document.querySelector(".main-nav").style.position = "fixed";
     image.src = "images/mtn momo.png";
     document.querySelector(".main-nav h1").textContent = "MoMo";
