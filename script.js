@@ -36,6 +36,7 @@ let modalBg = document.querySelector(".modal-bg");
 let modalClose = document.querySelector(".close-modal");
 const image = document.querySelector(".image");
 const posit = document.querySelector(".posit");
+let modalBg3 = document.querySelector(".modal-bg3");
 
 image.addEventListener("click", function () {
   modalBg.classList.remove("modal-activate");
@@ -111,3 +112,17 @@ sendCode.addEventListener("click", function () {
     }
   }
 });
+
+function myFunction1() {
+  modalBg3.classList.add("modal-activate3");
+
+  image.src = "images/arrowb.png";
+
+  document.querySelector(".main-nav").style.zindex = 1;
+  document.querySelector(".modal-box3").style.zindex = 99;
+
+  document.querySelector(".main-nav").style.position = "fixed";
+  image.src = "images/arrowb.png";
+  document.querySelector(".main-nav h1").textContent = "Transfer";
+  clickToOpen.style.display = "none";
+}

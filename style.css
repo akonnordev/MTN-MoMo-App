@@ -278,12 +278,41 @@
     opacity: 1;
     z-index: 98;
   }
+  .modal-bg3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100vh; */
+    min-height: 100vh;
+    background-color: rgb(231, 233, 235);
+    font-family: "Montserrat", sans-serif;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  .modal-activate3 {
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+  }
   .modal-box2 {
     position: relative;
     font-family: "Montserrat", sans-serif;
     background-color: rgb(231, 233, 235);
     width: 100vw;
-    height: 100%;
+    height: 70px;
+    top: 90px;
+  }
+  .modal-box3 {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(231, 233, 235);
+    width: 100vw;
+    height: 70px;
     top: 90px;
   }
   .loginT {
@@ -362,7 +391,7 @@
     margin: 30px 0px;
   }
   .mservices {
-    height: fit-content;
+    height: 70px;
   }
   .services {
     color: #000000;
@@ -378,7 +407,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   .icondivia {
     position: relative;
