@@ -40,6 +40,7 @@ let modalBg3 = document.querySelector(".modal-bg3");
 
 image.addEventListener("click", function () {
   modalBg.classList.remove("modal-activate");
+  modalBg3.classList.remove("modal-activate3");
   document.querySelector(".main-nav h1").textContent = "Home";
   document.querySelector(".main-nav").style.position = "fixed";
   image.src = "images/mtn momo.png";
