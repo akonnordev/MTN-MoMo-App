@@ -5,7 +5,7 @@
     background-color: rgb(231, 233, 235);
   }
   main {
-    height: 5px;
+    height: 1px;
   }
 
   .main-nav {
@@ -238,8 +238,8 @@
   }
   .modal-btn {
     /* position: fixed; */
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
     border-radius: 100%;
     /* display: inline-block; */
     background: url(images/mtnlogo.png);
@@ -262,8 +262,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
     background-color: rgb(231, 233, 235);
+    font-family: "Montserrat", sans-serif;
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -281,7 +283,7 @@
     font-family: "Montserrat", sans-serif;
     background-color: rgb(231, 233, 235);
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     top: 90px;
   }
   .loginT {
@@ -295,10 +297,15 @@
   }
   .firstround {
     background-color: white;
+    position: relative;
+    height: 150px;
     border-radius: 50px 50px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     border-radius: 40px 40px 40px 40px;
+    max-height: max-content;
   }
   .firstround a {
     padding-left: 29px;
@@ -329,24 +336,72 @@
   .forMore {
     background-color: #ffcc00;
     color: rgb(5, 80, 96);
-    height: 60px;
+    height: 40px;
+    position: relative;
     display: flex;
     justify-content: center;
     border-radius: 0px 0px 20px 20px;
     align-items: center;
+    font-size: 14px;
+    bottom: 30px;
   }
-
+  .firstroundinner {
+    position: relative;
+    bottom: 10px;
+  }
   .MomopayQR {
     position: absolute;
     display: flex;
-    top: 50px;
-    right: 60px;
+    top: 30px;
+    right: 40px;
     font-weight: bold;
     cursor: pointer;
   }
   .firstround hr {
     width: 60%;
     margin: 30px 0px;
+  }
+  .mservices {
+    height: fit-content;
+  }
+  .services {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+  }
+  .momo1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .momo2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .icondivia {
+    position: relative;
+    top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 65px;
+    background-color: #ffffff;
+
+    margin-right: 14px;
+  }
+
+  .icondivia i {
+    color: rgb(9, 100, 126);
+    padding-top: 8px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 10px;
+  }
+  .icondivia span {
+    font-size: 10px;
   }
 }
 @media screen and (min-width: 1024px) and (max-height: 1310px) {

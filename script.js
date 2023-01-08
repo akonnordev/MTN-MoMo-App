@@ -91,7 +91,6 @@ sendCode.addEventListener("click", function () {
     image.src = "images/mtn momo.png";
     document.querySelector(".main-nav h1").textContent = "MoMo";
     clickToOpen.style.display = "none";
-    // alert("helloo good");
   } else if (guess !== secretNumber) {
     chances--;
 
