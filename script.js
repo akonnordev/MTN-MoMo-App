@@ -6,6 +6,7 @@ const mainNav2 = document.querySelector(".main-nav2");
 const footerNav = document.querySelector(".footer-nav");
 const secretNumber = 1234;
 const sendCode = document.querySelector(".sendcode");
+
 let chances = 3;
 let modalBg2 = document.querySelector(".modal-bg2");
 let modalClose2 = document.querySelector(".close-modal2");
@@ -37,10 +38,13 @@ let modalClose = document.querySelector(".close-modal");
 const image = document.querySelector(".image");
 const posit = document.querySelector(".posit");
 let modalBg3 = document.querySelector(".modal-bg3");
+let modalBg4 = document.querySelector(".modal-bg4");
+const Proceed = document.querySelector(".proceed");
 
 image.addEventListener("click", function () {
   modalBg.classList.remove("modal-activate");
   modalBg3.classList.remove("modal-activate3");
+  modalBg4.classList.remove("modal-activate4");
   document.querySelector(".main-nav h1").textContent = "Home";
   document.querySelector(".main-nav").style.position = "fixed";
   image.src = "images/mtn momo.png";
@@ -117,8 +121,6 @@ sendCode.addEventListener("click", function () {
 function myFunction1() {
   modalBg3.classList.add("modal-activate3");
 
-  image.src = "images/arrowb.png";
-
   document.querySelector(".main-nav").style.zindex = 1;
   document.querySelector(".modal-box3").style.zindex = 99;
 
@@ -127,3 +129,37 @@ function myFunction1() {
   document.querySelector(".main-nav h1").textContent = "Transfer";
   clickToOpen.style.display = "none";
 }
+function myFunction2() {
+  modalBg4.classList.add("modal-activate4");
+  document.querySelector(".main-nav").style.zindex = 1;
+  document.querySelector(".main-nav").style.position = "fixed";
+  image.src = "images/arrowb.png";
+  document.querySelector(".main-nav h1").textContent = "Transfer (MoMo)";
+  document.querySelector(".modal-box4").style.zindex = 99;
+  clickToOpen.style.display = "none";
+}
+const array = [242685844, 246332198];
+let momobalance = 100;
+
+Proceed.addEventListener("click", function () {
+  let momonumber = Number(document.querySelector(".momonumber").value);
+  let momonumber1 = Number(document.querySelector(".momonumber1").value);
+
+  console.log(momonumber);
+  console.log(momonumber1);
+  if (!momonumber) {
+    alert(`
+    Enter a Mobile Phone Number`);
+  } else if (array.includes(momonumber)) {
+    modalBg3.classList.remove("modal-activate3");
+    if (momonumber === array[0] || array[1]) {
+    }
+    alert(`available balance is ${momobalance - momonumber1}`);
+    document.querySelector(".main-nav").style.position = "fixed";
+    image.src = "images/mtn momo.png";
+    document.querySelector(".main-nav h1").textContent = "MoMo";
+    clickToOpen.style.display = "none";
+  } else if (!array.includes(momonumber)) {
+    alert("please enter a valid momo number");
+  }
+});

@@ -278,6 +278,14 @@
     opacity: 1;
     z-index: 98;
   }
+  .modal-box2 {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(231, 233, 235);
+    width: 100vw;
+    height: 70px;
+    top: 90px;
+  }
   .modal-bg3 {
     position: fixed;
     top: 0;
@@ -299,7 +307,7 @@
     opacity: 1;
     z-index: 99;
   }
-  .modal-box2 {
+  .modal-box3 {
     position: relative;
     font-family: "Montserrat", sans-serif;
     background-color: rgb(231, 233, 235);
@@ -307,7 +315,29 @@
     height: 70px;
     top: 90px;
   }
-  .modal-box3 {
+  .modal-bg4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100vh; */
+    min-height: 100vh;
+    background-color: rgb(231, 233, 235);
+    font-family: "Montserrat", sans-serif;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  .modal-activate4 {
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+  }
+
+  .modal-box4 {
     position: relative;
     font-family: "Montserrat", sans-serif;
     background-color: rgb(231, 233, 235);

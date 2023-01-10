@@ -203,8 +203,47 @@
                       <div class="momo1">
                         <div class="icondivia">
                           <a href="#">
-                            <i class="fa fa-user"></i><span> MoMo User</span></a
+                            <i onclick="myFunction2()" class="fa fa-user"></i
+                            ><span onclick="myFunction2()"> MoMo User</span></a
                           >
+                          <div class="modal-bg4">
+                            <div class="modal-box4">
+                              <h1>MoMo Number</h1>
+                              <div class="posit">
+                                <form onsubmit="return false;">
+                                  <label for="phone"
+                                    >Enter your phone number:</label
+                                  >
+                                  <input
+                                    type="tel"
+                                    oninput="this.value=this.value.slice(0,this.maxLength)"
+                                    name="phone"
+                                    class="momonumber"
+                                    placeholder="10 DIGITS MOMO NUMBER"
+                                    pattern="0[0-9]{9}"
+                                    maxlength="10"
+                                    required=""
+                                  />
+                                  <label for="number"
+                                    >Enter Amount to Transfer:</label
+                                  >
+                                  <input
+                                    type="text"
+                                    inputmode="numeric"
+                                    oninput="this.value=this.value.slice(0,this.maxLength)"
+                                    name="phone"
+                                    class="momonumber1"
+                                    placeholder="10 DIGITS MOMO NUMBER"
+                                    pattern="0[0-9]{9}"
+                                    maxlength="10"
+                                    required=""
+                                  />
+                                  <button class="proceed">Proceed</button>
+                                </form>
+                              </div>
+                              <button class="close-modal2">&times;</button>
+                            </div>
+                          </div>
                         </div>
                         <div class="icondivia">
                           <a href="#">
