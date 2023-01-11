@@ -14,6 +14,7 @@ const date = new Date().toUTCString();
 console.log(date);
 let mbody = document.querySelector(".mbody");
 
+// function for side navigation bar
 clickToOpen.addEventListener("click", function () {
   mobileMenu.classList.toggle("active");
   mainNav2.classList.toggle("active2");
@@ -57,6 +58,7 @@ posit.addEventListener("click", function () {
   mobileMenu.style.padding = "0 29px";
 });
 
+//function to open momo pin modal
 modalBtn.addEventListener("click", function () {
   modalBg.classList.add("modal-activate");
   document.querySelector(".main-nav h1").textContent = "MoMo Pin";
@@ -82,6 +84,7 @@ togglePassword.addEventListener("click", function () {
   this.classList.toggle("fa-eye-slash");
 });
 
+//function to verify pin code
 sendCode.addEventListener("click", function () {
   let guess = Number(document.querySelector(".guess").value);
   if (!guess) {
@@ -129,6 +132,8 @@ function myFunction1() {
   document.querySelector(".main-nav h1").textContent = "Transfer";
   clickToOpen.style.display = "none";
 }
+
+//function to perform transaction
 function myFunction2() {
   modalBg4.classList.add("modal-activate4");
   document.querySelector(".main-nav").style.zindex = 1;
@@ -138,27 +143,33 @@ function myFunction2() {
   document.querySelector(".modal-box4").style.zindex = 99;
   clickToOpen.style.display = "none";
 }
-const array = [242685844, 246332198];
+const array = [242685844, 279660288, 599582253, 246332198];
 let momobalance = 100;
 
 Proceed.addEventListener("click", function () {
   let momonumber = Number(document.querySelector(".momonumber").value);
   let momonumber1 = Number(document.querySelector(".momonumber1").value);
+  let momonumber2 = document.querySelector(".momonumber2").value;
+  let error1 = momonumber1 > momobalance;
+  console.log(error1);
 
   console.log(momonumber);
   console.log(momonumber1);
-  if (!momonumber) {
+  if (error1) {
     alert(`
-    Enter a Mobile Phone Number`);
+    You do not have sufficient funds to perform this transaction`);
   } else if (array.includes(momonumber)) {
     modalBg3.classList.remove("modal-activate3");
-    if (momonumber === array[0] || array[1]) {
+    modalBg2.classList.remove("modal-activate2");
+    modalBg.classList.remove("modal-activate");
+    modalBg4.classList.remove("modal-activate4");
+
+    if (momonumber === array.includes(momonumber)) {
     }
-    alert(`available balance is ${momobalance - momonumber1}`);
-    document.querySelector(".main-nav").style.position = "fixed";
-    image.src = "images/mtn momo.png";
-    document.querySelector(".main-nav h1").textContent = "MoMo";
-    clickToOpen.style.display = "none";
+    let currenbalance = (momobalance -= momonumber1);
+    alert(
+      `You have transferred GH¢${momonumber1} to 0${momonumber} with reference ${momonumber2}. Your current available balance is ${currenbalance}`
+    );
   } else if (!array.includes(momonumber)) {
     alert("please enter a valid momo number");
   }
