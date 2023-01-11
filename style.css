@@ -344,6 +344,7 @@
     width: 100vw;
     height: 70px;
     top: 90px;
+    text-align: center;
   }
   .loginT {
     font-size: 8px;
@@ -463,10 +464,34 @@
   .icondivia span {
     font-size: 10px;
   }
+
+  .positionform input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-sizing: border-box;
+  }
+  .proceed {
+    width: 40%;
+    padding: 12px 0px;
+    margin: 8px 120px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: #ffcc00;
+  }
+  .proceed:hover {
+    background-color: aqua;
+  }
 }
 @media screen and (min-width: 1024px) and (max-height: 1310px) {
-  /* body,
+  body,
   html {
     display: none;
-  } */
+  }
 }

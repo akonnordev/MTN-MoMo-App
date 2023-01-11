@@ -163,12 +163,17 @@ Proceed.addEventListener("click", function () {
     modalBg2.classList.remove("modal-activate2");
     modalBg.classList.remove("modal-activate");
     modalBg4.classList.remove("modal-activate4");
+    image.src = "images/mtn momo.png";
+    document.querySelector(".main-nav h1").textContent = "Home";
+    clickToOpen.style.display = "block";
+    mobileMenu.style.padding = "70px 0";
 
     if (momonumber === array.includes(momonumber)) {
     }
     let currenbalance = (momobalance -= momonumber1);
     alert(
-      `You have transferred GH¢${momonumber1} to 0${momonumber} with reference ${momonumber2}. Your current available balance is ${currenbalance}`
+      `${date}
+      You have transferred GH¢${momonumber1} to 0${momonumber} with reference ${momonumber2}. Your current available balance is ${currenbalance}`
     );
   } else if (!array.includes(momonumber)) {
     alert("please enter a valid momo number");
